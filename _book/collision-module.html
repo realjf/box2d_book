@@ -1,0 +1,561 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>碰撞模块 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dynamics-module.html" />
+    
+    
+    <link rel="prev" href="common-module.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="overview.html">
+            
+                <a href="overview.html">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="hello-box2d.html">
+            
+                <a href="hello-box2d.html">
+            
+                    
+                    你好，Box2D
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="testbed.html">
+            
+                <a href="testbed.html">
+            
+                    
+                    试验台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="common-module.html">
+            
+                <a href="common-module.html">
+            
+                    
+                    通用模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="collision-module.html">
+            
+                <a href="collision-module.html">
+            
+                    
+                    碰撞模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="dynamics-module.html">
+            
+                <a href="dynamics-module.html">
+            
+                    
+                    动力学模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="loose-ends.html">
+            
+                <a href="loose-ends.html">
+            
+                    
+                    松散的末端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    工具书类
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="faq.html">
+            
+                <a href="faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >碰撞模块</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x78B0;&#x649E;&#x6A21;&#x5757;">&#x78B0;&#x649E;&#x6A21;&#x5757;</h2>
+<p>&#x78B0;&#x649E;&#x6A21;&#x5757;&#x5305;&#x542B;&#x64CD;&#x4F5C;&#x5B83;&#x4EEC;&#x7684;&#x5F62;&#x72B6;&#x548C;&#x51FD;&#x6570;&#x3002;&#x8BE5;&#x6A21;&#x5757;&#x8FD8;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E2A;&#x52A8;&#x6001;&#x6811;&#x548C;&#x5927;&#x7CFB;&#x7EDF;&#x52A0;&#x901F;&#x78B0;&#x649E;&#x5904;&#x7406;&#x7684;&#x5BBD;&#x9636;&#x6BB5;&#x3002;</p>
+<p>&#x78B0;&#x649E;&#x6A21;&#x5757;&#x8BBE;&#x8BA1;&#x4E3A;&#x53EF;&#x5728;&#x52A8;&#x6001;&#x7CFB;&#x7EDF;&#x4E4B;&#x5916;&#x4F7F;&#x7528;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x9664;&#x4E86;&#x7269;&#x7406;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6E38;&#x620F;&#x7684;&#x5176;&#x4ED6;&#x65B9;&#x9762;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x6811;&#x3002;</p>
+<p>&#x7136;&#x800C;&#xFF0C;Box2D&#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x521A;&#x4F53;&#x7269;&#x7406;&#x5F15;&#x64CE;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x67D0;&#x4E9B;&#x5E94;&#x7528;&#x4E2D;&#xFF0C;&#x78B0;&#x649E;&#x6A21;&#x5757;&#x672C;&#x8EAB;&#x7684;&#x4F7F;&#x7528;&#x53EF;&#x80FD;&#x4F1A;&#x53D7;&#x5230;&#x9650;&#x5236;&#x3002;&#x540C;&#x6837;&#x5730;&#xFF0C;&#x6211;&#x4E5F;&#x4E0D;&#x4F1A;&#x82B1;&#x5F88;&#x5927;&#x7684;&#x529B;&#x6C14;&#x6765;&#x8BB0;&#x5F55;&#x5B83;&#x6216;&#x6DA6;&#x8272;api&#x3002;</p>
+<h1 id="&#x5F62;&#x72B6;">&#x5F62;&#x72B6;</h1>
+<p>&#x5F62;&#x72B6;&#x63CF;&#x8FF0;&#x4E86;&#x78B0;&#x649E;&#x51E0;&#x4F55;&#xFF0C;&#x53EF;&#x4EE5;&#x72EC;&#x7ACB;&#x4E8E;&#x7269;&#x7406;&#x6A21;&#x62DF;&#x4F7F;&#x7528;&#x3002;&#x81F3;&#x5C11;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x4EE5;&#x540E;&#x53EF;&#x4EE5;&#x9644;&#x52A0;&#x5230;&#x521A;&#x4F53;&#x7684;&#x5F62;&#x72B6;&#x3002;</p>
+<p>Box2D&#x5F62;&#x72B6;&#x5B9E;&#x73B0;<a href="https://box2d.org/documentation/classb2_shape.html" target="_blank">B2&#x5F62;&#x72B6;</a>&#x57FA;&#x7C7B;&#x3002;&#x57FA;&#x7C7B;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x4EE5;&#xFF1A;</p>
+<ul>
+<li>&#x6D4B;&#x8BD5;&#x4E0E;&#x5F62;&#x72B6;&#x91CD;&#x53E0;&#x7684;&#x70B9;</li>
+<li>&#x5BF9;&#x5F62;&#x72B6;&#x6267;&#x884C;&#x5149;&#x7EBF;&#x6295;&#x5C04;</li>
+<li>&#x8BA1;&#x7B97;&#x5F62;&#x72B6;&#x7684;AABB</li>
+<li>&#x8BA1;&#x7B97;&#x5F62;&#x72B6;&#x7684;&#x8D28;&#x91CF;&#x7279;&#x6027;</li>
+</ul>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x6BCF;&#x4E2A;&#x5F62;&#x72B6;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x6210;&#x5458;&#x548C;&#x4E00;&#x4E2A;&#x534A;&#x5F84;&#x3002;&#x534A;&#x5F84;&#x751A;&#x81F3;&#x9002;&#x7528;&#x4E8E;&#x591A;&#x8FB9;&#x5F62;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x8FF0;&#x3002;</p>
+<p>&#x8BF7;&#x8BB0;&#x4F4F;&#xFF0C;&#x5F62;&#x72B6;&#x4E0D;&#x4E86;&#x89E3;&#x7269;&#x4F53;&#xFF0C;&#x5E76;&#x4E14;&#x4E0E;&#x52A8;&#x529B;&#x5B66;&#x7CFB;&#x7EDF;&#x65E0;&#x5173;&#x3002;&#x5F62;&#x72B6;&#x4EE5;&#x7D27;&#x51D1;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#xFF0C;&#x5E76;&#x9488;&#x5BF9;&#x5927;&#x5C0F;&#x548C;&#x6027;&#x80FD;&#x8FDB;&#x884C;&#x4E86;&#x4F18;&#x5316;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5F62;&#x72B6;&#x4E0D;&#x5BB9;&#x6613;&#x79FB;&#x52A8;&#x3002;&#x5FC5;&#x987B;&#x624B;&#x52A8;&#x8BBE;&#x7F6E;&#x5F62;&#x72B6;&#x9876;&#x70B9;&#x4F4D;&#x7F6E;&#x624D;&#x80FD;&#x79FB;&#x52A8;&#x5F62;&#x72B6;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x4F7F;&#x7528;&#x56FA;&#x5B9A;&#x88C5;&#x7F6E;&#x5C06;&#x5F62;&#x72B6;&#x9644;&#x7740;&#x5230;&#x5B9E;&#x4F53;&#x4E0A;&#x65F6;&#xFF0C;&#x5F62;&#x72B6;&#x4F1A;&#x968F;&#x4E3B;&#x4F53;&#x5B9E;&#x4F53;&#x521A;&#x6027;&#x79FB;&#x52A8;&#x3002;&#x603B;&#x800C;&#x8A00;&#x4E4B;&#xFF1A;</p>
+<ul>
+<li>&#x5F53;&#x4E00;&#x4E2A;&#x5F62;&#x72B6;<strong>&#x4E0D;</strong>&#x9644;&#x52A0;&#x5230;&#x5B9E;&#x4F53;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x9876;&#x70B9;&#x89C6;&#x4E3A;&#x5728;&#x4E16;&#x754C;&#x7A7A;&#x95F4;&#x4E2D;&#x8868;&#x793A;&#x7684;&#x9876;&#x70B9;&#x3002;</li>
+<li>&#x5C06;&#x5F62;&#x72B6;&#x9644;&#x52A0;&#x5230;&#x5B9E;&#x4F53;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x9876;&#x70B9;&#x89C6;&#x4E3A;&#x4EE5;&#x5C40;&#x90E8;&#x5750;&#x6807;&#x8868;&#x793A;&#x3002;</li>
+</ul>
+<h2 id="&#x5706;&#x5F62;&#x5F62;&#x72B6;">&#x5706;&#x5F62;&#x5F62;&#x72B6;</h2>
+<p>&#x5706;&#x5F62;&#x6709;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x548C;&#x534A;&#x5F84;&#x3002;&#x5706;&#x5708;&#x662F;&#x5B9E;&#x5FC3;&#x7684;&#x3002;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x5706;&#x5F62;&#x72B6;&#x5236;&#x4F5C;&#x7A7A;&#x5FC3;&#x5706;&#x3002;</p>
+<pre><code class="lang-c++">b2CircleShape circle;
+circle.m_p.Set(<span class="hljs-number">2.0f</span>, <span class="hljs-number">3.0f</span>);
+circle.m_radius = <span class="hljs-number">0.5f</span>;
+</code></pre>
+<h2 id="&#x591A;&#x8FB9;&#x5F62;&#x5F62;&#x72B6;">&#x591A;&#x8FB9;&#x5F62;&#x5F62;&#x72B6;</h2>
+<p>&#x591A;&#x8FB9;&#x5F62;&#x662F;&#x5B9E;&#x51F8;&#x591A;&#x8FB9;&#x5F62;&#x3002;&#x5F53;&#x6240;&#x6709;&#x8FDE;&#x63A5;&#x5185;&#x90E8;&#x4E24;&#x70B9;&#x7684;&#x7EBF;&#x6BB5;&#x4E0D;&#x4E0E;&#x591A;&#x8FB9;&#x5F62;&#x7684;&#x4EFB;&#x4F55;&#x8FB9;&#x76F8;&#x4EA4;&#x65F6;&#xFF0C;&#x591A;&#x8FB9;&#x5F62;&#x662F;&#x51F8;&#x7684;&#x3002;&#x591A;&#x8FB9;&#x5F62;&#x662F;&#x5B9E;&#x5FC3;&#x7684;&#xFF0C;&#x4ECE;&#x4E0D;&#x7A7A;&#x5FC3;&#x3002;&#x591A;&#x8FB9;&#x5F62;&#x5FC5;&#x987B;&#x6709;3&#x4E2A;&#x6216;&#x66F4;&#x591A;&#x9876;&#x70B9;&#x3002;</p>
+<p><img src="images/convex-and-concave.png" alt="convex-and-concave"></p>
+<p>&#x591A;&#x8FB9;&#x5F62;&#x9876;&#x70B9;&#x4EE5;&#x9006;&#x65F6;&#x9488;&#x65B9;&#x5411;&#x7F20;&#x7ED5;&#xFF08;CCW&#xFF09;&#x65B9;&#x5F0F;&#x5B58;&#x50A8;&#x3002;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x5C0F;&#x5FC3;&#xFF0C;&#x56E0;&#x4E3A;&#x9006;&#x65F6;&#x9488;&#x65B9;&#x5411;&#x7684;&#x6982;&#x5FF5;&#x662F;&#x5173;&#x4E8E;&#x4E00;&#x4E2A;&#x53F3;&#x624B;&#x5750;&#x6807;&#x7CFB;&#xFF0C;z&#x8F74;&#x6307;&#x5411;&#x5E73;&#x9762;&#x4E4B;&#x5916;&#x3002;&#x8FD9;&#x53EF;&#x80FD;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x662F;&#x987A;&#x65F6;&#x9488;&#x65B9;&#x5411;&#x7684;&#xFF0C;&#x8FD9;&#x53D6;&#x51B3;&#x4E8E;&#x5750;&#x6807;&#x7CFB;&#x7EA6;&#x5B9A;&#x3002;</p>
+<p><img src="images/ccw.png" alt="ccw"></p>
+<p>&#x591A;&#x8FB9;&#x5F62;&#x6210;&#x5458;&#x662F;&#x516C;&#x5171;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;&#x591A;&#x8FB9;&#x5F62;&#x3002;&#x6267;&#x884C;&#x521D;&#x59CB;&#x5316;&#x548C;&#x521B;&#x5EFA;&#x6CD5;&#x5411;&#x91CF;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F20;&#x5165;&#x9876;&#x70B9;&#x6570;&#x7EC4;&#x6765;&#x521B;&#x5EFA;&#x591A;&#x8FB9;&#x5F62;&#x3002;&#x6570;&#x7EC4;&#x7684;&#x6700;&#x5927;&#x5927;&#x5C0F;&#x7531;<code>b2_maxPolygonVertices</code>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;8&#x3002;&#x8FD9;&#x8DB3;&#x4EE5;&#x63CF;&#x8FF0;&#x5927;&#x591A;&#x6570;&#x51F8;&#x591A;&#x8FB9;&#x5F62;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;<code>b2PolygonShape::Set</code>&#x51FD;&#x6570;&#x81EA;&#x52A8;&#x8BA1;&#x7B97;&#x51F8;&#x58F3;&#x5E76;&#x5EFA;&#x7ACB;&#x9002;&#x5F53;&#x7684;&#x7F20;&#x7ED5;&#x987A;&#x5E8F;&#x3002;&#x5F53;&#x9876;&#x70B9;&#x6570;&#x8F83;&#x5C11;&#x65F6;&#xFF0C;&#x6B64;&#x51FD;&#x6570;&#x901F;&#x5EA6;&#x8F83;&#x5FEB;&#x3002;&#x5982;&#x679C;&#x4F60;&#x589E;&#x52A0;<code>b2&#x6700;&#x5927;&#x591A;&#x8FB9;&#x5F62;&#x9876;&#x70B9;</code>&#xFF0C;&#x5219;&#x51F8;&#x58F3;&#x8BA1;&#x7B97;&#x53EF;&#x80FD;&#x4F1A;&#x53D8;&#x6162;&#x3002;&#x8FD8;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x51F8;&#x58F3;&#x51FD;&#x6570;&#x53EF;&#x80FD;&#x4F1A;&#x6D88;&#x9664;&#x548C;/&#x6216;&#x91CD;&#x65B0;&#x6392;&#x5E8F;&#x60A8;&#x63D0;&#x4F9B;&#x7684;&#x70B9;&#x3002;&#x6BD4;<code>b2_linearSlop</code>&#x53EF;&#x4EE5;&#x5408;&#x5E76;</p>
+<pre><code class="lang-c++"><span class="hljs-comment">// This defines a triangle in CCW order.</span>
+b2Vec2 vertices[<span class="hljs-number">3</span>];
+vertices[<span class="hljs-number">0</span>].Set(<span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>);
+vertices[<span class="hljs-number">1</span>].Set(<span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>);
+vertices[<span class="hljs-number">2</span>].Set(<span class="hljs-number">0.0f</span>, <span class="hljs-number">1.0f</span>);
+
+int32 count = <span class="hljs-number">3</span>;
+b2PolygonShape polygon;
+polygon.Set(vertices, count);
+</code></pre>
+<p>&#x591A;&#x8FB9;&#x5F62;&#x6709;&#x4E00;&#x4E9B;&#x65B9;&#x4FBF;&#x7684;&#x51FD;&#x6570;&#x6765;&#x521B;&#x5EFA;&#x957F;&#x65B9;&#x4F53;&#x3002;</p>
+<pre><code class="lang-c++"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SetAsBox</span><span class="hljs-params">(<span class="hljs-keyword">float</span> hx, <span class="hljs-keyword">float</span> hy)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">SetAsBox</span><span class="hljs-params">(<span class="hljs-keyword">float</span> hx, <span class="hljs-keyword">float</span> hy, <span class="hljs-keyword">const</span> b2Vec2&amp; center, <span class="hljs-keyword">float</span> angle)</span></span>;
+</code></pre>
+<p>&#x591A;&#x8FB9;&#x5F62;&#x7EE7;&#x627F;&#x534A;&#x5F84;<a href="https://box2d.org/documentation/classb2_shape.html" target="_blank">B2&#x5F62;&#x72B6;</a>. &#x534A;&#x5F84;&#x5C06;&#x56F4;&#x7ED5;&#x591A;&#x8FB9;&#x5F62;&#x521B;&#x5EFA;&#x8499;&#x76AE;&#x3002;&#x8499;&#x76AE;&#x7528;&#x4E8E;&#x5806;&#x53E0;&#x573A;&#x666F;&#xFF0C;&#x4EE5;&#x4FDD;&#x6301;&#x591A;&#x8FB9;&#x5F62;&#x7A0D;&#x5FAE;&#x5206;&#x5F00;&#x3002;&#x8FD9;&#x5141;&#x8BB8;&#x8FDE;&#x7EED;&#x7684;&#x78B0;&#x649E;&#x4F5C;&#x7528;&#x4E8E;&#x6838;&#x5FC3;&#x591A;&#x8FB9;&#x5F62;&#x3002;</p>
+<p><img src="images/meng-pi.png" alt="&#x591A;&#x8FB9;&#x5F62;&#x8499;&#x76AE;"></p>
+<p>&#x591A;&#x8FB9;&#x5F62;&#x8499;&#x76AE;&#x901A;&#x8FC7;&#x4FDD;&#x6301;&#x591A;&#x8FB9;&#x5F62;&#x7684;&#x5206;&#x79BB;&#x6709;&#x52A9;&#x4E8E;&#x9632;&#x6B62;&#x96A7;&#x9053;&#x7A7F;&#x8D8A;&#x3002;&#x8FD9;&#x5C06;&#x5BFC;&#x81F4;&#x5F62;&#x72B6;&#x4E4B;&#x95F4;&#x7684;&#x5C0F;&#x95F4;&#x9699;&#x3002;&#x89C6;&#x89C9;&#x8868;&#x793A;&#x53EF;&#x4EE5;&#x6BD4;&#x591A;&#x8FB9;&#x5F62;&#x5927;&#xFF0C;&#x4EE5;&#x9690;&#x85CF;&#x4EFB;&#x4F55;&#x95F4;&#x9699;&#x3002;</p>
+<p><img src="images/polygons-collide.png" alt="polygons-collide"></p>
+<p>&#x5E76;&#x4E0D;&#x662F;&#x8BF4;&#x591A;&#x8FB9;&#x5F62;&#x8499;&#x76AE;&#x4EC5;&#x7528;&#x4E8E;&#x5E2E;&#x52A9;&#x8FDE;&#x7EED;&#x78B0;&#x649E;&#x3002;&#x76EE;&#x7684;&#x4E0D;&#x662F;&#x6A21;&#x62DF;&#x5706;&#x5F62;&#x591A;&#x8FB9;&#x5F62;&#x3002;</p>
+<h2 id="&#x8FB9;&#x7F18;&#x5F62;&#x72B6;">&#x8FB9;&#x7F18;&#x5F62;&#x72B6;</h2>
+<p>&#x8FB9;&#x7F18;&#x5F62;&#x72B6;&#x662F;&#x7EBF;&#x6BB5;&#x3002;&#x8FD9;&#x4E9B;&#x662F;&#x4E3A;&#x4E86;&#x5E2E;&#x52A9;&#x4F60;&#x7684;&#x6E38;&#x620F;&#x5236;&#x4F5C;&#x4E00;&#x4E2A;&#x81EA;&#x7531;&#x5F62;&#x5F0F;&#x7684;&#x9759;&#x6001;&#x73AF;&#x5883;&#x3002;&#x8FB9;&#x7F18;&#x5F62;&#x72B6;&#x7684;&#x4E00;&#x4E2A;&#x4E3B;&#x8981;&#x9650;&#x5236;&#x662F;&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x4E0E;&#x5706;&#x548C;&#x591A;&#x8FB9;&#x5F62;&#x78B0;&#x649E;&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x4E0E;&#x81EA;&#x8EAB;&#x78B0;&#x649E;&#x3002;Box2D&#x4F7F;&#x7528;&#x7684;&#x78B0;&#x649E;&#x7B97;&#x6CD5;&#x8981;&#x6C42;&#x4E24;&#x4E2A;&#x78B0;&#x649E;&#x5F62;&#x72B6;&#x4E2D;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x4F53;&#x79EF;&#x3002;&#x8FB9;&#x5F62;&#x72B6;&#x6CA1;&#x6709;&#x4F53;&#x79EF;&#xFF0C;&#x56E0;&#x6B64;&#x8FB9;-&#x8FB9;&#x78B0;&#x649E;&#x662F;&#x4E0D;&#x53EF;&#x80FD;&#x7684;&#x3002;</p>
+<pre><code class="lang-c++"><span class="hljs-comment">// This an edge shape.</span>
+<span class="hljs-function">b2Vec2 <span class="hljs-title">v1</span><span class="hljs-params">(<span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>)</span></span>;
+<span class="hljs-function">b2Vec2 <span class="hljs-title">v2</span><span class="hljs-params">(<span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>)</span></span>;
+
+b2EdgeShape edge;
+edge.SetTwoSided(v1, v2);
+</code></pre>
+<p>&#x5728;&#x8BB8;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6E38;&#x620F;&#x73AF;&#x5883;&#x662F;&#x901A;&#x8FC7;&#x7AEF;&#x5230;&#x7AEF;&#x8FDE;&#x63A5;&#x591A;&#x4E2A;&#x8FB9;&#x7F18;&#x5F62;&#x72B6;&#x6765;&#x6784;&#x5EFA;&#x7684;&#x3002;&#x5F53;&#x591A;&#x8FB9;&#x5F62;&#x6CBF;&#x8FB9;&#x94FE;&#x6ED1;&#x52A8;&#x65F6;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x610F;&#x5916;&#x7684;&#x4F2A;&#x5F71;&#x3002;&#x5728;&#x4E0B;&#x56FE;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x4E00;&#x4E2A;&#x76D2;&#x5B50;&#x4E0E;&#x4E00;&#x4E2A;&#x5185;&#x90E8;&#x9876;&#x70B9;&#x76F8;&#x649E;&#x3002;&#x8FD9;&#x4E9B;<em>&#x9B3C;</em>&#x5F53;&#x591A;&#x8FB9;&#x5F62;&#x4E0E;&#x751F;&#x6210;&#x5185;&#x90E8;&#x78B0;&#x649E;&#x6CD5;&#x7EBF;&#x7684;&#x5185;&#x90E8;&#x9876;&#x70B9;&#x78B0;&#x649E;&#x65F6;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x78B0;&#x649E;&#x3002;</p>
+<p><img src="images/internal-normal.png" alt="internal-normal"></p>
+<p>&#x5982;&#x679C;edge1&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x79CD;&#x78B0;&#x649E;&#x4F3C;&#x4E4E;&#x6CA1;&#x95EE;&#x9898;&#x3002;&#x5728;edge1&#x5B58;&#x5728;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5185;&#x90E8;&#x78B0;&#x649E;&#x4F3C;&#x4E4E;&#x662F;&#x4E00;&#x4E2A;bug&#x3002;&#x4F46;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5F53;Box2D&#x78B0;&#x649E;&#x4E24;&#x4E2A;&#x5F62;&#x72B6;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x5B64;&#x7ACB;&#x5730;&#x67E5;&#x770B;&#x5B83;&#x4EEC;&#x3002;</p>
+<p>&#x5E78;&#x8FD0;&#x7684;&#x662F;&#xFF0C;&#x8FB9;&#x7F18;&#x5F62;&#x72B6;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x673A;&#x5236;&#xFF0C;&#x901A;&#x8FC7;&#x5B58;&#x50A8;&#x76F8;&#x90BB;&#x5BF9;&#x8C61;&#x6765;&#x6D88;&#x9664;&#x91CD;&#x5F71;&#x78B0;&#x649E;<em>&#x9B3C;</em>&#x9876;&#x70B9;&#x3002;Box2D&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x91CD;&#x5F71;&#x9876;&#x70B9;&#x6765;&#x9632;&#x6B62;&#x5185;&#x90E8;&#x78B0;&#x649E;&#x3002;</p>
+<p><img src="images/ghost.png" alt="ghost"></p>
+<p>&#x7528;&#x4E8E;&#x5904;&#x7406;&#x91CD;&#x5F71;&#x78B0;&#x649E;&#x7684;Box2D&#x7B97;&#x6CD5;&#x53EA;&#x652F;&#x6301;&#x5355;&#x4FA7;&#x78B0;&#x649E;&#x3002;&#x4ECE;&#x7B2C;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x5411;&#x7B2C;&#x4E8C;&#x4E2A;&#x9876;&#x70B9;&#x770B;&#x65F6;&#xFF0C;&#x524D;&#x9762;&#x5728;&#x53F3;&#x4FA7;&#x3002;&#x8FD9;&#x4E0E;&#x591A;&#x8FB9;&#x5F62;&#x4F7F;&#x7528;&#x7684;&#x9006;&#x65F6;&#x9488;&#x7F20;&#x7ED5;&#x987A;&#x5E8F;&#x76F8;&#x5339;&#x914D;&#x3002;</p>
+<pre><code class="lang-c++"><span class="hljs-comment">// This is an edge shape with ghost vertices.</span>
+<span class="hljs-function">b2Vec2 <span class="hljs-title">v0</span><span class="hljs-params">(<span class="hljs-number">1.7f</span>, <span class="hljs-number">0.0f</span>)</span></span>;
+<span class="hljs-function">b2Vec2 <span class="hljs-title">v1</span><span class="hljs-params">(<span class="hljs-number">1.0f</span>, <span class="hljs-number">0.25f</span>)</span></span>;
+<span class="hljs-function">b2Vec2 <span class="hljs-title">v2</span><span class="hljs-params">(<span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>)</span></span>;
+<span class="hljs-function">b2Vec2 <span class="hljs-title">v3</span><span class="hljs-params">(<span class="hljs-number">-1.7</span>f, <span class="hljs-number">0.4f</span>)</span></span>;
+
+b2EdgeShape edge;
+edge.SetOneSided(v0, v1, v2, v3);
+</code></pre>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x7F1D;&#x5408;&#x8FB9;&#x6709;&#x70B9;&#x6D6A;&#x8D39;&#x548C;&#x4E4F;&#x5473;&#x3002;&#x8FD9;&#x5C31;&#x5F15;&#x51FA;&#x4E86;&#x94FE;&#x72B6;&#x7ED3;&#x6784;&#x3002;</p>
+<h2 id="&#x94FE;&#x5F62;">&#x94FE;&#x5F62;</h2>
+<p>&#x94FE;&#x72B6;&#x7ED3;&#x6784;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x6709;&#x6548;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x8FDE;&#x63A5;&#x591A;&#x4E2A;&#x8FB9;&#x7F18;&#xFF0C;&#x4EE5;&#x6784;&#x5EFA;&#x9759;&#x6001;&#x6E38;&#x620F;&#x4E16;&#x754C;&#x3002;&#x81EA;&#x52A8;&#x6D88;&#x9664;&#x78B0;&#x649E;&#x548C;&#x5355;&#x4FA7;&#x78B0;&#x649E;&#x3002;&#x78B0;&#x649E;&#x662F;&#x5355;&#x4FA7;&#x7684;&#xFF0C;&#x4EE5;&#x6D88;&#x9664;&#x91CD;&#x5F71;&#x78B0;&#x649E;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x5173;&#x5FC3;&#x91CD;&#x5F71;&#x78B0;&#x649E;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x7EC4;&#x53CC;&#x9762;&#x8FB9;&#x5F62;&#x72B6;&#x3002;&#x6548;&#x7387;&#x662F;&#x76F8;&#x4F3C;&#x7684;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x94FE;&#x5F62;&#x72B6;&#x7684;&#x6700;&#x7B80;&#x5355;&#x65B9;&#x6CD5;&#x662F;&#x521B;&#x5EFA;&#x5FAA;&#x73AF;&#x3002;&#x53EA;&#x9700;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x6570;&#x7EC4;&#x3002;</p>
+<pre><code class="lang-c++">b2Vec2 vs[<span class="hljs-number">4</span>];
+vs[<span class="hljs-number">0</span>].Set(<span class="hljs-number">1.7f</span>, <span class="hljs-number">0.0f</span>);
+vs[<span class="hljs-number">1</span>].Set(<span class="hljs-number">1.0f</span>, <span class="hljs-number">0.25f</span>);
+vs[<span class="hljs-number">2</span>].Set(<span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>);
+vs[<span class="hljs-number">3</span>].Set(<span class="hljs-number">-1.7</span>f, <span class="hljs-number">0.4f</span>);
+
+b2ChainShape chain;
+chain.CreateLoop(vs, <span class="hljs-number">4</span>);
+</code></pre>
+<p>&#x8FB9;&#x7F18;&#x6CD5;&#x7EBF;&#x53D6;&#x51B3;&#x4E8E;&#x7F20;&#x7ED5;&#x987A;&#x5E8F;&#x3002;&#x9006;&#x65F6;&#x9488;&#x7F20;&#x7ED5;&#x987A;&#x5E8F;&#x4F7F;&#x6CD5;&#x7EBF;&#x671D;&#x5916;&#xFF0C;&#x987A;&#x65F6;&#x9488;&#x7F20;&#x7ED5;&#x987A;&#x5E8F;&#x4F7F;&#x6CD5;&#x7EBF;&#x5411;&#x5185;&#x3002;</p>
+<p><img src="images/chain-shape.png" alt="chain-shape"></p>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x6EDA;&#x52A8;&#x7684;&#x6E38;&#x620F;&#x4E16;&#x754C;&#xFF0C;&#x5E76;&#x60F3;&#x8FDE;&#x63A5;&#x51E0;&#x4E2A;&#x94FE;&#x5728;&#x4E00;&#x8D77;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x91CD;&#x5F71;&#x9876;&#x70B9;&#x5C06;&#x94FE;&#x8FDE;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5C31;&#x50CF;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684;&#x4E00;&#x6837;<a href="https://box2d.org/documentation/classb2_edge_shape.html" target="_blank">b2EdgeShape&#x516C;&#x53F8;</a> .</p>
+<p><img src="images/chain-ghost.png" alt="chain-ghost"></p>
+<pre><code class="lang-c++">b2ChainShape::CreateChain(<span class="hljs-keyword">const</span> b2Vec2* vertices, int32 count,
+        <span class="hljs-keyword">const</span> b2Vec2&amp; prevVertex, <span class="hljs-keyword">const</span> b2Vec2&amp; nextVertex);
+</code></pre>
+<p>&#x4E0D;&#x652F;&#x6301;&#x94FE;&#x5F62;&#x72B6;&#x7684;&#x81EA;&#x76F8;&#x4EA4;&#x3002;&#x5B83;&#x53EF;&#x80FD;&#x6709;&#x7528;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x3002;&#x9632;&#x6B62;&#x91CD;&#x5F71;&#x78B0;&#x649E;&#x7684;&#x4EE3;&#x7801;&#x5047;&#x5B9A;&#x94FE;&#x6CA1;&#x6709;&#x81EA;&#x76F8;&#x4EA4;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x975E;&#x5E38;&#x63A5;&#x8FD1;&#x7684;&#x9876;&#x70B9;&#x4E5F;&#x4F1A;&#x5BFC;&#x81F4;&#x95EE;&#x9898;&#x3002;&#x786E;&#x4FDD;&#x6240;&#x6709;&#x8FB9;&#x7F18;&#x7684;&#x957F;&#x5EA6;&#x8D85;&#x8FC7;b2_linearSlop&#xFF08;5&#x6BEB;&#x7C73;&#xFF09;&#x3002;</p>
+<p><img src="images/self-intersection.png" alt="self-intersection"></p>
+<p>&#x94FE;&#x4E2D;&#x7684;&#x6BCF;&#x6761;&#x8FB9;&#x90FD;&#x88AB;&#x89C6;&#x4E3A;&#x5B50;&#x5F62;&#x72B6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7D22;&#x5F15;&#x8BBF;&#x95EE;&#x3002;&#x5F53;&#x4E00;&#x4E2A;&#x94FE;&#x5F62;&#x8FDE;&#x63A5;&#x5230;&#x4E00;&#x4E2A;&#x7269;&#x4F53;&#x4E0A;&#x65F6;&#xFF0C;&#x6BCF;&#x4E00;&#x6761;&#x8FB9;&#x90FD;&#x4F1A;&#x5728;&#x5BBD;&#x76F8;&#x4F4D;&#x78B0;&#x649E;&#x6811;&#x4E2D;&#x5F97;&#x5230;&#x81EA;&#x5DF1;&#x7684;&#x8FB9;&#x754C;&#x6846;&#x3002;</p>
+<pre><code class="lang-c++"><span class="hljs-comment">// Visit each child edge.</span>
+<span class="hljs-keyword">for</span> (int32 i = <span class="hljs-number">0</span>; i \&lt; chain.GetChildCount(); ++i)
+{
+    b2EdgeShape edge;
+    chain.GetChildEdge(&amp;edge, i);
+
+    ...
+}
+</code></pre>
+<h1 id="&#x51E0;&#x4F55;&#x67E5;&#x8BE2;">&#x51E0;&#x4F55;&#x67E5;&#x8BE2;</h1>
+<p>&#x53EF;&#x4EE5;&#x5BF9;&#x5355;&#x4E2A;&#x5F62;&#x72B6;&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x51E0;&#x4F55;&#x67E5;&#x8BE2;&#x3002;</p>
+<h2 id="&#x5F62;&#x72B6;&#x70B9;&#x6D4B;&#x8BD5;">&#x5F62;&#x72B6;&#x70B9;&#x6D4B;&#x8BD5;</h2>
+<p>&#x53EF;&#x4EE5;&#x6D4B;&#x8BD5;&#x70B9;&#x662F;&#x5426;&#x4E0E;&#x5F62;&#x72B6;&#x91CD;&#x53E0;&#x3002;&#x4E3A;&#x5F62;&#x72B6;&#x548C;&#x4E16;&#x754C;&#x70B9;&#x63D0;&#x4F9B;&#x53D8;&#x6362;&#x3002;</p>
+<pre><code class="lang-c++">b2Transform transform;
+transform.SetIdentity();
+<span class="hljs-function">b2Vec2 <span class="hljs-title">point</span><span class="hljs-params">(<span class="hljs-number">5.0f</span>, <span class="hljs-number">2.0f</span>)</span></span>;
+
+<span class="hljs-keyword">bool</span> hit = shape-&gt;TestPoint(transform, point);
+</code></pre>
+<p>&#x8FB9;&#x548C;&#x94FE;&#x5F62;&#x72B6;&#x59CB;&#x7EC8;&#x8FD4;&#x56DE;false&#xFF0C;&#x5373;&#x4F7F;&#x94FE;&#x662F;&#x5FAA;&#x73AF;&#x3002;</p>
+<h2 id="&#x5F62;&#x72B6;&#x5149;&#x7EBF;&#x6295;&#x5C04;">&#x5F62;&#x72B6;&#x5149;&#x7EBF;&#x6295;&#x5C04;</h2>
+<p>&#x53EF;&#x4EE5;&#x5728;&#x5F62;&#x72B6;&#x4E0A;&#x6295;&#x5C04;&#x5149;&#x7EBF;&#x4EE5;&#x83B7;&#x5F97;&#x7B2C;&#x4E00;&#x4E2A;&#x4EA4;&#x70B9;&#x548C;&#x6CD5;&#x5411;&#x91CF;&#x3002;&#x56E0;&#x4E3A;&#x5149;&#x7EBF;&#x6295;&#x5C04;&#x4E00;&#x6B21;&#x53EA;&#x68C0;&#x67E5;&#x4E00;&#x6761;&#x8FB9;&#xFF0C;&#x6240;&#x4EE5;&#x5305;&#x542B;&#x94FE;&#x5F62;&#x72B6;&#x7684;&#x5B50;&#x7D22;&#x5F15;&#x3002;</p>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;&#x5B89;&#x5168;</strong>&#xFF1A;&#x5982;&#x679C;&#x5149;&#x7EBF;&#x5F00;&#x59CB;&#x4E8E;&#x5706;&#x5F62;&#x6216;&#x591A;&#x8FB9;&#x5F62;&#x7B49;&#x51F8;&#x9762;&#x5F62;&#x72B6;&#x5185;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x8BB0;&#x5F55;&#x547D;&#x4E2D;&#x3002;&#x8FD9;&#x4E0E;Box2D&#x5C06;&#x51F8;&#x9762;&#x5F62;&#x72B6;&#x89C6;&#x4E3A;&#x5B9E;&#x4F53;&#x662F;&#x4E00;&#x81F4;&#x7684;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-c++">b2Transfrom transform;
+transform.SetIdentity();
+
+b2RayCastInput input;
+input.p1.Set(<span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>);
+input.p2.Set(<span class="hljs-number">1.0f</span>, <span class="hljs-number">0.0f</span>);
+input.maxFraction = <span class="hljs-number">1.0f</span>;
+int32 childIndex = <span class="hljs-number">0</span>;
+
+b2RayCastOutput output;
+<span class="hljs-keyword">bool</span> hit = shape-&gt;RayCast(&amp;output, input, transform, childIndex);
+
+<span class="hljs-keyword">if</span> (hit)
+{
+    b2Vec2 hitPoint = input.p1 + output.fraction * (input.p2 -- input.p1);
+    ...
+}
+</code></pre>
+<h1 id="&#x6210;&#x5BF9;&#x51FD;&#x6570;">&#x6210;&#x5BF9;&#x51FD;&#x6570;</h1>
+<p>&#x78B0;&#x649E;&#x6A21;&#x5757;&#x5305;&#x542B;&#x4E00;&#x5BF9;&#x5F62;&#x72B6;&#x5E76;&#x8BA1;&#x7B97;&#x4E00;&#x4E9B;&#x7ED3;&#x679C;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5176;&#x4E2D;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li>&#x91CD;&#x53E0;</li>
+<li>&#x63A5;&#x89E6;&#x6B67;&#x7BA1;</li>
+<li>&#x8DDD;&#x79BB;</li>
+<li>&#x649E;&#x51FB;&#x65F6;&#x95F4;</li>
+</ul>
+<h2 id="&#x91CD;&#x53E0;">&#x91CD;&#x53E0;</h2>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6B64;&#x51FD;&#x6570;&#x6D4B;&#x8BD5;&#x4E24;&#x4E2A;&#x5F62;&#x72B6;&#x662F;&#x5426;&#x91CD;&#x53E0;&#xFF1A;</p>
+<pre><code class="lang-c++">b2Transform xfA = ..., xfB = ...;
+<span class="hljs-keyword">bool</span> overlap = b2TestOverlap(shapeA, indexA, shapeB, indexB, xfA, xfB);
+</code></pre>
+<p>&#x540C;&#x6837;&#xFF0C;&#x5BF9;&#x4E8E;&#x94FE;&#x5F62;&#x72B6;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5FC5;&#x987B;&#x4E3A;&#x63D0;&#x4F9B;&#x5B50;&#x7D22;&#x5F15;&#x3002;</p>
+<h2 id="&#x63A5;&#x89E6;&#x6B67;&#x7BA1;">&#x63A5;&#x89E6;&#x6B67;&#x7BA1;</h2>
+<p>Box2D&#x5177;&#x6709;&#x8BA1;&#x7B97;&#x91CD;&#x53E0;&#x5F62;&#x72B6;&#x63A5;&#x89E6;&#x70B9;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5982;&#x679C;&#x8003;&#x8651;&#x5706;&#x6216;&#x5706;&#x591A;&#x8FB9;&#x5F62;&#xFF0C;&#x5219;&#x53EA;&#x80FD;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x63A5;&#x89E6;&#x70B9;&#x548C;&#x6CD5;&#x7EBF;&#x3002;&#x5728;&#x591A;&#x8FB9;&#x5F62;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E24;&#x4E2A;&#x70B9;&#x3002;&#x8FD9;&#x4E9B;&#x70B9;&#x5171;&#x4EAB;&#x76F8;&#x540C;&#x7684;&#x6CD5;&#x5411;&#x91CF;&#xFF0C;&#x56E0;&#x6B64;Box2D&#x5C06;&#x5B83;&#x4EEC;&#x7EC4;&#x5408;&#x6210;&#x6D41;&#x5F62;&#x7ED3;&#x6784;&#x3002;&#x63A5;&#x89E6;&#x6C42;&#x89E3;&#x5668;&#x5229;&#x7528;&#x8FD9;&#x4E00;&#x70B9;&#x6765;&#x63D0;&#x9AD8;&#x5806;&#x53E0;&#x7A33;&#x5B9A;&#x6027;&#x3002;</p>
+<p><img src="images/contact-manifold.png" alt="contact-manifold"></p>
+<p>&#x901A;&#x5E38;&#xFF0C;&#x60A8;&#x4E0D;&#x9700;&#x8981;&#x76F4;&#x63A5;&#x8BA1;&#x7B97;&#x63A5;&#x89E6;&#x6D41;&#x5F62;&#xFF0C;&#x4F46;&#x662F;&#x60A8;&#x53EF;&#x80FD;&#x4F1A;&#x4F7F;&#x7528;&#x6A21;&#x62DF;&#x4E2D;&#x4EA7;&#x751F;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;<a href="https://box2d.org/documentation/structb2_manifold.html" target="_blank">B2&#x6B67;&#x7BA1;</a>&#x7ED3;&#x6784;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6CD5;&#x5411;&#x91CF;&#x548C;&#x6700;&#x591A;&#x4E24;&#x4E2A;&#x63A5;&#x89E6;&#x70B9;&#x3002;&#x6CD5;&#x7EBF;&#x548C;&#x70B9;&#x4FDD;&#x6301;&#x5728;&#x5C40;&#x90E8;&#x5750;&#x6807;&#x4E2D;&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x63A5;&#x89E6;&#x6C42;&#x89E3;&#x5668;&#xFF0C;&#x6BCF;&#x4E2A;&#x70B9;&#x5B58;&#x50A8;&#x6CD5;&#x5411;&#x548C;&#x5207;&#x5411;&#xFF08;&#x6469;&#x64E6;&#xFF09;&#x8109;&#x51B2;&#x3002;</p>
+<p>&#x5B58;&#x50A8;&#x5728;<a href="https://box2d.org/documentation/structb2_manifold.html" target="_blank">B2&#x6B67;&#x7BA1;</a>&#x4E3A;&#x5185;&#x90E8;&#x4F7F;&#x7528;&#x800C;&#x4F18;&#x5316;&#x3002;&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#xFF0C;&#x901A;&#x5E38;&#x6700;&#x597D;&#x4F7F;&#x7528;<a href="https://box2d.org/documentation/structb2_world_manifold.html" target="_blank">b2&#x4E16;&#x754C;&#x6D41;&#x5F62;</a>&#x7ED3;&#x6784;&#x751F;&#x6210;&#x63A5;&#x89E6;&#x6CD5;&#x7EBF;&#x548C;&#x70B9;&#x7684;&#x4E16;&#x754C;&#x5750;&#x6807;&#x3002;&#x4F60;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;<a href="https://box2d.org/documentation/structb2_manifold.html" target="_blank">B2&#x6B67;&#x7BA1;</a>&#x5F62;&#x72B6;&#x7684;&#x53D8;&#x5316;&#x548C;&#x534A;&#x5F84;</p>
+<pre><code class="lang-c++">b2WorldManifold worldManifold;
+worldManifold.Initialize(&amp;manifold, transformA, shapeA.m_radius,
+transformB, shapeB.m_radius);
+
+<span class="hljs-keyword">for</span> (int32 i = <span class="hljs-number">0</span>; i \&lt; manifold.pointCount; ++i)
+{
+    b2Vec2 point = worldManifold.points[i];
+    ...
+}
+</code></pre>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x4E16;&#x754C;&#x6D41;&#x5F62;&#x4F7F;&#x7528;&#x539F;&#x59CB;&#x6D41;&#x5F62;&#x7684;&#x70B9;&#x8BA1;&#x6570;&#x3002;</p>
+<p>&#x5728;&#x6A21;&#x62DF;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5F62;&#x72B6;&#x53EF;&#x80FD;&#x4F1A;&#x79FB;&#x52A8;&#xFF0C;&#x6D41;&#x5F62;&#x53EF;&#x80FD;&#x4F1A;&#x6539;&#x53D8;&#x3002;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x6216;&#x5220;&#x9664;&#x70B9;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;b2GetPointStates&#x68C0;&#x6D4B;&#x5230;&#x8FD9;&#x4E00;&#x70B9;&#x3002;</p>
+<pre><code class="lang-c++">b2PointState state1[<span class="hljs-number">2</span>], state2[<span class="hljs-number">2</span>];
+b2GetPointStates(state1, state2, &amp;manifold1, &amp;manifold2);
+
+<span class="hljs-keyword">if</span> (state1[<span class="hljs-number">0</span>] == b2_removeState)
+{
+    <span class="hljs-comment">// process event</span>
+}
+</code></pre>
+<h2 id="&#x8DDD;&#x79BB;">&#x8DDD;&#x79BB;</h2>
+<p>&#x8FD9;&#x4E2A;<code>b2Distance</code>&#x51FD;&#x6570;&#x53EF;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x5F62;&#x72B6;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x3002;&#x8DDD;&#x79BB;&#x51FD;&#x6570;&#x9700;&#x8981;&#x5C06;&#x4E24;&#x4E2A;&#x5F62;&#x72B6;&#x8F6C;&#x6362;&#x4E3A;<a href="https://box2d.org/documentation/structb2_distance_proxy.html" target="_blank"> b2DistanceProxy</a>. &#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x7F13;&#x5B58;&#x7528;&#x4E8E;&#x5BF9;&#x91CD;&#x590D;&#x8C03;&#x7528;&#x7684;&#x8DDD;&#x79BB;&#x51FD;&#x6570;&#x8FDB;&#x884C;&#x70ED;&#x542F;&#x52A8;&#x3002;</p>
+<p><img src="images/distance-func.png" alt="distance-func"></p>
+<h2 id="&#x649E;&#x51FB;&#x65F6;&#x95F4;">&#x649E;&#x51FB;&#x65F6;&#x95F4;</h2>
+<p>&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x5F62;&#x72B6;&#x79FB;&#x52A8;&#x5F88;&#x5FEB;&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x80FD;<em>&#x96A7;&#x9053;</em>&#x5728;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x7684;&#x65F6;&#x95F4;&#x6B65;&#x4E2D;&#x5F7C;&#x6B64;&#x7A7F;&#x8D8A;&#x3002;</p>
+<p><img src="images/suidao.png" alt="&#x96A7;&#x9053;&#x5DE5;&#x7A0B;"></p>
+<p>&#x8FD9;&#x4E2A;<code>b2TimeOfImpact</code>&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x786E;&#x5B9A;&#x4E24;&#x4E2A;&#x8FD0;&#x52A8;&#x5F62;&#x72B6;&#x78B0;&#x649E;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x8FD9;&#x53EB;&#x505A;<em>&#x649E;&#x51FB;&#x65F6;&#x95F4;</em>&#xFF08;TOI&#xFF09;&#x3002;&#x4E3B;&#x8981;&#x76EE;&#x7684;<code>b2TimeOfImpact</code>&#x7528;&#x4E8E;&#x96A7;&#x9053;&#x9632;&#x62A4;&#x3002;&#x7279;&#x522B;&#x662F;&#xFF0C;&#x5B83;&#x7684;&#x8BBE;&#x8BA1;&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x79FB;&#x52A8;&#x5BF9;&#x8C61;&#x5728;&#x9759;&#x6001;&#x7EA7;&#x522B;&#x51E0;&#x4F55;&#x4F53;&#x4E4B;&#x5916;&#x8FDB;&#x884C;&#x96A7;&#x9053;&#x4F20;&#x8F93;&#x3002;</p>
+<p>&#x6B64;&#x51FD;&#x6570;&#x8003;&#x8651;&#x4E24;&#x4E2A;&#x5F62;&#x72B6;&#x7684;&#x65CB;&#x8F6C;&#x548C;&#x5E73;&#x79FB;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x65CB;&#x8F6C;&#x8DB3;&#x591F;&#x5927;&#xFF0C;&#x5219;&#x51FD;&#x6570;&#x53EF;&#x80FD;&#x4F1A;&#x9519;&#x8FC7;&#x78B0;&#x649E;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4ECD;&#x5C06;&#x62A5;&#x544A;&#x4E00;&#x4E2A;&#x4E0D;&#x91CD;&#x53E0;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5E76;&#x5C06;&#x6355;&#x83B7;&#x6240;&#x6709;&#x5E73;&#x79FB;&#x78B0;&#x649E;&#x3002;</p>
+<p>&#x51B2;&#x51FB;&#x65F6;&#x95F4;&#x51FD;&#x6570;&#x786E;&#x5B9A;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x5206;&#x79BB;&#x8F74;&#xFF0C;&#x5E76;&#x786E;&#x4FDD;&#x5F62;&#x72B6;&#x4E0D;&#x4F1A;&#x5728;&#x8BE5;&#x8F74;&#x4E0A;&#x4EA4;&#x53C9;&#x3002;&#x8FD9;&#x53EF;&#x80FD;&#x4F1A;&#x9519;&#x8FC7;&#x5728;&#x6700;&#x7EC8;&#x4F4D;&#x7F6E;&#x6E05;&#x6670;&#x53EF;&#x89C1;&#x7684;&#x78B0;&#x649E;&#x3002;&#x867D;&#x7136;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x80FD;&#x4F1A;&#x6F0F;&#x6389;&#x4E00;&#x4E9B;&#x78B0;&#x649E;&#xFF0C;&#x4F46;&#x5BF9;&#x4E8E;&#x96A7;&#x9053;&#x9884;&#x9632;&#x6765;&#x8BF4;&#xFF0C;&#x5B83;&#x662F;&#x975E;&#x5E38;&#x5FEB;&#x901F;&#x548C;&#x8DB3;&#x591F;&#x7684;&#x3002;</p>
+<p><img src="images/miss-collide.png" alt="miss-collide"></p>
+<p>&#x5F88;&#x96BE;&#x9650;&#x5236;&#x65CB;&#x8F6C;&#x5E45;&#x5EA6;&#x3002;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x56E0;&#x4E3A;&#x5C0F;&#x65CB;&#x8F6C;&#x800C;&#x5FFD;&#x7565;&#x78B0;&#x649E;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x8FD9;&#x4E9B;&#x9519;&#x8FC7;&#x7684;&#x65CB;&#x8F6C;&#x78B0;&#x649E;&#x4E0D;&#x5E94;&#x8BE5;&#x635F;&#x5BB3;&#x6E38;&#x620F;&#x3002;&#x5B83;&#x4EEC;&#x5F80;&#x5F80;&#x662F;&#x8F7B;&#x5FAE;&#x78B0;&#x649E;&#x3002;</p>
+<p>&#x51FD;&#x6570;&#x9700;&#x8981;&#x4E24;&#x4E2A;&#x5F62;&#x72B6;&#xFF08;&#x8F6C;&#x6362;&#x4E3A;<a href="https://box2d.org/documentation/structb2_distance_proxy.html" target="_blank"> b2DistanceProxy</a>)&#x4E8C;&#x52A0;&#x4E8C;<a href="https://box2d.org/documentation/structb2_sweep.html" target="_blank">B2&#x626B;&#x63CF;</a>&#x7ED3;&#x6784;&#x3002;&#x626B;&#x63CF;&#x7ED3;&#x6784;&#x5B9A;&#x4E49;&#x5F62;&#x72B6;&#x7684;&#x521D;&#x59CB;&#x548C;&#x6700;&#x7EC8;&#x53D8;&#x6362;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x56FA;&#x5B9A;&#x65CB;&#x8F6C;&#x6765;&#x6267;&#x884C;<em>&#x578B;&#x94F8;&#x9020;</em>. &#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x649E;&#x51FB;&#x65F6;&#x95F4;&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x9519;&#x8FC7;&#x4EFB;&#x4F55;&#x78B0;&#x649E;&#x3002;</p>
+<h1 id="&#x52A8;&#x6001;&#x6811;">&#x52A8;&#x6001;&#x6811;</h1>
+<p>&#x8FD9;&#x4E2A;<a href="https://box2d.org/documentation/classb2_dynamic_tree.html" target="_blank"> b2DynamicTree&#x516C;&#x53F8;</a>&#x7C7B;&#x88AB;Box2D&#x7528;&#x6765;&#x6709;&#x6548;&#x5730;&#x7EC4;&#x7EC7;&#x5927;&#x91CF;&#x7684;&#x5F62;&#x72B6;&#x3002;&#x8FD9;&#x4E2A;&#x73ED;&#x4E0D;&#x77E5;&#x9053;&#x5F62;&#x72B6;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x5B83;&#x5728;&#x5E26;&#x6709;&#x7528;&#x6237;&#x6570;&#x636E;&#x6307;&#x9488;&#x7684;&#x8F74;&#x5BF9;&#x9F50;&#x8FB9;&#x754C;&#x6846;&#xFF08;AABBs&#xFF09;&#x4E0A;&#x8FD0;&#x884C;&#x3002;</p>
+<p>&#x52A8;&#x6001;&#x6811;&#x662F;&#x4E00;&#x4E2A;&#x5206;&#x5C42;&#x7684;AABB&#x6811;&#x3002;&#x6811;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5185;&#x90E8;&#x8282;&#x70B9;&#x90FD;&#x6709;&#x4E24;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#x3002;&#x53F6;&#x8282;&#x70B9;&#x662F;&#x5355;&#x7528;&#x6237;AABB&#x3002;&#x6811;&#x4F7F;&#x7528;&#x65CB;&#x8F6C;&#x6765;&#x4FDD;&#x6301;&#x6811;&#x7684;&#x5E73;&#x8861;&#xFF0C;&#x5373;&#x4F7F;&#x5728;&#x9000;&#x5316;&#x8F93;&#x5165;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#x3002;</p>
+<p>&#x6811;&#x7ED3;&#x6784;&#x5141;&#x8BB8;&#x6709;&#x6548;&#x7684;&#x5149;&#x7EBF;&#x6295;&#x5C04;&#x548C;&#x533A;&#x57DF;&#x67E5;&#x8BE2;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x573A;&#x666F;&#x4E2D;&#x53EF;&#x80FD;&#x6709;&#x6570;&#x767E;&#x4E2A;&#x5F62;&#x72B6;&#x3002;&#x901A;&#x8FC7;&#x5149;&#x7EBF;&#x6295;&#x5C04;&#x6BCF;&#x4E2A;&#x5F62;&#x72B6;&#xFF0C;&#x53EF;&#x4EE5;&#x4EE5;&#x86EE;&#x529B;&#x65B9;&#x5F0F;&#x5BF9;&#x573A;&#x666F;&#x6267;&#x884C;&#x5149;&#x7EBF;&#x6295;&#x5C04;&#x3002;&#x8FD9;&#x5C06;&#x662F;&#x4F4E;&#x6548;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x6CA1;&#x6709;&#x5229;&#x7528;&#x6B63;&#x5728;&#x5C55;&#x5F00;&#x7684;&#x5F62;&#x72B6;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x53EF;&#x4EE5;&#x7EF4;&#x62A4;&#x52A8;&#x6001;&#x6811;&#x5E76;&#x5BF9;&#x6811;&#x6267;&#x884C;&#x5149;&#x7EBF;&#x6295;&#x5C04;&#x3002;&#x8FD9;&#x5C06;&#x8DF3;&#x8FC7;&#x5927;&#x91CF;&#x7684;&#x5F62;&#x72B6;&#xFF0C;&#x4F7F;&#x5149;&#x7EBF;&#x7A7F;&#x8FC7;&#x6811;&#x3002;</p>
+<p>&#x533A;&#x57DF;&#x67E5;&#x8BE2;&#x4F7F;&#x7528;&#x6811;&#x6765;&#x67E5;&#x627E;&#x4E0E;&#x67E5;&#x8BE2;AABB&#x91CD;&#x53E0;&#x7684;&#x6240;&#x6709;&#x53F6;AABB&#x3002;&#x8FD9;&#x6BD4;&#x66B4;&#x529B;&#x65B9;&#x6CD5;&#x5FEB;&#xFF0C;&#x56E0;&#x4E3A;&#x8BB8;&#x591A;&#x5F62;&#x72B6;&#x53EF;&#x4EE5;&#x8DF3;&#x8FC7;&#x3002;</p>
+<p><img src="images/chongdie.png" alt="&#x91CD;&#x53E0;&#x5B9E;&#x9A8C;"></p>
+<p>&#x901A;&#x5E38;&#x4E0D;&#x4F1A;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x6811;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x4F60;&#x4F1A;&#x7ECF;&#x5386;<a href="https://box2d.org/documentation/classb2_world.html" target="_blank">b2World&#x516C;&#x53F8;</a>&#x7C7B;&#x7528;&#x4E8E;&#x5149;&#x7EBF;&#x6295;&#x5C04;&#x548C;&#x533A;&#x57DF;&#x67E5;&#x8BE2;&#x3002;&#x5982;&#x679C;&#x60A8;&#x8BA1;&#x5212;&#x5B9E;&#x4F8B;&#x5316;&#x81EA;&#x5DF1;&#x7684;&#x52A8;&#x6001;&#x6811;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x67E5;&#x770B;Box2D&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5B83;&#x6765;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5B83;&#x3002;</p>
+<h1 id="&#x5BBD;&#x76F8;&#x4F4D;">&#x5BBD;&#x76F8;&#x4F4D;</h1>
+<p>&#x7269;&#x7406;&#x6B65;&#x9AA4;&#x4E2D;&#x7684;&#x78B0;&#x649E;&#x5904;&#x7406;&#x53EF;&#x5206;&#x4E3A;&#x7A84;&#x9636;&#x6BB5;&#x548C;&#x5BBD;&#x9636;&#x6BB5;&#x3002;&#x5728;&#x7A84;&#x76F8;&#x4F4D;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x8BA1;&#x7B97;&#x5F62;&#x72B6;&#x5BF9;&#x4E4B;&#x95F4;&#x7684;&#x63A5;&#x89E6;&#x70B9;&#x3002;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6709;N&#x4E2A;&#x5F62;&#x72B6;&#x3002;&#x4F7F;&#x7528;&#x86EE;&#x529B;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x9700;&#x8981;&#x6267;&#x884C;N*N/2&#x5BF9;&#x7684;&#x7A84;&#x76F8;&#x4F4D;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;<a href="https://box2d.org/documentation/classb2_broad_phase.html" target="_blank"> B2&#x5BBD;&#x76F8;</a>&#x7C7B;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x6811;&#x8FDB;&#x884C;&#x5BF9;&#x7BA1;&#x7406;&#x6765;&#x51CF;&#x5C11;&#x6B64;&#x8D1F;&#x8F7D;&#x3002;&#x8FD9;&#x5927;&#x5927;&#x51CF;&#x5C11;&#x4E86;&#x7A84;&#x76F8;&#x4F4D;&#x8C03;&#x7528;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x4E0D;&#x4F1A;&#x76F4;&#x63A5;&#x4E0E;&#x5BBD;&#x76F8;&#x4E92;&#x52A8;&#x3002;&#x76F8;&#x53CD;&#xFF0C;Box2D&#x5728;&#x5185;&#x90E8;&#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#x4E00;&#x4E2A;&#x5E7F;&#x6CDB;&#x7684;&#x9636;&#x6BB5;&#x3002;&#x4E5F;&#xFF0C;<a href="https://box2d.org/documentation/classb2_broad_phase.html" target="_blank"> B2&#x5BBD;&#x76F8;</a>&#x8BBE;&#x8BA1;&#x65F6;&#x8003;&#x8651;&#x4E86;Box2D&#x7684;&#x6A21;&#x62DF;&#x5FAA;&#x73AF;&#xFF0C;&#x56E0;&#x6B64;&#x5B83;&#x53EF;&#x80FD;&#x4E0D;&#x9002;&#x5408;&#x5176;&#x4ED6;&#x7528;&#x4F8B;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="common-module.html" class="navigation navigation-prev " aria-label="Previous page: 通用模块">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dynamics-module.html" class="navigation navigation-next " aria-label="Next page: 动力学模块">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"碰撞模块","level":"1.6","depth":1,"next":{"title":"动力学模块","level":"1.7","depth":1,"path":"dynamics-module.md","ref":"dynamics-module.md","articles":[]},"previous":{"title":"通用模块","level":"1.5","depth":1,"path":"common-module.md","ref":"common-module.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters"],"pluginsConfig":{"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"collision-module.md","mtime":"2021-05-25T06:57:29.064Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-25T07:41:08.923Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
